@@ -10,15 +10,18 @@ function mostra(frase) {
     pulaLinha();
 }
 
-function calculaImc(peso, altura){
-   return Math.round((peso / (altura * altura))); 
+var vitorias = parseInt(prompt("Entre com o número de vitórias: "));
+var empates = parseInt(prompt("Entre com o número de empates: "));
+var pontos = vitorias * 3 + empates * 1;
+mostra("O número de pontos é: " + pontos);
+
+if(pontos > 28){
+    mostra("Seu time está melhor do que o ano passado.")
 }
-
-var nome = prompt("Informe o nome")
-var peso = prompt("Insira o peso de " + nome);
-var altura = prompt("Insira a altura de " + nome);
-var imc = calculaImc(peso, altura);
-
-mostra("O IMC de " + nome + " é " + imc);
+else if(pontos == 28){
+    mostra("Seu time está igual ao ano passado.");
+}
+else
+    mostra("Seu time está pior que o ano passado.");
 
 </script>
