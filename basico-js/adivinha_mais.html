@@ -1,8 +1,8 @@
 <meta charset="UTF-8">
-
-<input/>
+<h2>Tente adivinhar o número sorteado!</h2>
+<p>Digite um número de 1 a 10</p>
+<input/><br><br>
 <button>Compare</button>
-
 <script>
 
     function verifica()
@@ -10,12 +10,17 @@
         if(input.value == segredo)
             alert("Você acertou!");
         else
-            alert("Você errou... O número sorteado foi " + segredo);
+        {
+            alert("Você errou...");
+            input.value = "";
+            input.focus();
+        }
     }
 
 
     var segredo = Math.round(Math.random()*10);
     var input = document.querySelector("input");
+    input.focus();
     var button = document.querySelector("button");
     button.onclick = verifica;
 
