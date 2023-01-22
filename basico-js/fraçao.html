@@ -1,0 +1,22 @@
+<canvas width="1800" height="1800"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+	pincel.font='20px Georgia';
+	pincel.fillStyle='black';
+	pincel.fillText("Qual é a fração?", 50, 30);
+	var i;
+	for(i = 20; i < 200; i = i + 50)
+	{
+		if (i < 150)
+		{
+			pincel.fillStyle = "lightgreen";
+			pincel.fillRect(i, 50, 50, 50);
+		}
+		pincel.fillStyle = "black";
+		pincel.strokeRect(i, 50, 50, 50);
+	}
+
+</script>
